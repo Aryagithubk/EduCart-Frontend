@@ -1,0 +1,117 @@
+/* Cart Container */
+.cart-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart Title */
+.cart-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Empty Cart Message */
+.empty-cart-message {
+  font-size: 18px;
+  color: #666;
+  text-align: center;
+}
+
+/* Cart List */
+.cart-list {
+  margin-bottom: 20px;
+}
+
+/* Cart Item */
+.cart-item {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.cart-item:hover {
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Item Name */
+.item-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Item Price */
+.item-price {
+  font-size: 16px;
+  font-weight: 500;
+  color: #777;
+}
+
+/* Expected Delivery Info */
+.item-expectedDelivery {
+  font-size: 14px;
+  color: #888;
+  margin-left: 10px;
+}
+
+/* Remove All Button */
+.remove-all-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin: 20px 0;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.remove-all-btn:hover {
+  background-color: #e63939;
+  transform: scale(1.02);
+}
+
+/* Checkout Button */
+.checkout-btn {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 10px;
+  text-decoration: node;
+  text-underline-offset:unset;
+}
+
+.checkout-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+  text-decoration: node;
+
+}
+.link_chekcout{
+  text-decoration: none;
+}

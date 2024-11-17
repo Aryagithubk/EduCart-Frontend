@@ -1,0 +1,101 @@
+/* Container for the entire item list */
+.item-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid layout */
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Link for each item */
+.item-card-link {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit text color */
+}
+
+/* Individual Item card */
+.item-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+.item-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Ensures images are well-adjusted inside their containers */
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Content inside the card */
+.item-card-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.item-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.item-price {
+  font-size: 16px;
+  font-weight: 500;
+  color: #e74c3c;
+  margin-bottom: 5px;
+}
+
+.item-rating {
+  font-size: 14px;
+  color: #888;
+}
+
+.item-brand {
+  font-size: 13px;
+  color: #777;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+  .item-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .item-card img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .item-list {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .item-card img {
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .item-list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .item-card img {
+    height: 140px;
+  }
+}

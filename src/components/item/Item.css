@@ -1,0 +1,169 @@
+/* Main container for item cards */
+.item-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 280px; /* Card max width to maintain regularity */
+  height: 100%; /* Let the height adjust naturally */
+  margin: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid #e7e7e7;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white; /* White background for a clean look */
+}
+
+/* Hover effect for card scaling and shadow */
+.item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Wrapper for image to maintain aspect ratio */
+.item-image-wrapper {
+  width: 100%;
+  height: 0;
+  padding-bottom: 75%; /* 4:3 aspect ratio for images */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Image inside the card */
+.item-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Content container for text and details */
+.item-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+/* Brand name styling */
+.item-brand {
+  color: #7c7c7c;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+/* Item name styling */
+.item-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Container for price and rating */
+.item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto; /* Push info to the bottom */
+}
+
+/* Price styling */
+.item-price {
+  font-size: 1.2rem;
+  color: #4caf50; /* Green for price */
+}
+
+/* Rating star styling */
+.item-rating {
+  color: #ff9800; /* Gold color for stars */
+  font-size: 1.2rem;
+}
+
+/* Description section */
+.item-description {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 10px;
+  text-align: left;
+  word-wrap: break-word;
+  line-height: 1.4;
+}
+
+/* Discount label */
+.item-discount {
+  background-color: #ff5733;
+  color: white;
+  padding: 5px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Responsive layout for item cards container */
+.items-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+/* Responsive Design */
+
+/* For tablets and medium devices */
+@media (max-width: 1024px) {
+  .item-card {
+    max-width: 220px;
+  }
+
+  .item-price {
+    font-size: 1rem;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .items-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+    gap: 15px;
+  }
+
+  .item-card {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
+  .item-image-wrapper {
+    padding-bottom: 66.66%; /* Adjust image aspect ratio for smaller screens */
+  }
+
+  .item-description {
+    font-size: 0.8rem;
+  }
+}
+
+/* For small mobile devices */
+@media (max-width: 480px) {
+  .items-container {
+    grid-template-columns: repeat(1, 1fr); /* One card per row */
+  }
+
+  .item-card {
+    margin: 10px 0;
+  }
+
+  .item-image-wrapper {
+    padding-bottom: 50%; /* Further adjust for small screens */
+  }
+}

@@ -1,0 +1,116 @@
+.checkout-container {
+  margin-top: 40px;
+  padding: 20px;
+  max-width: 600px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.checkout-container:hover {
+  transform: translateY(-5px);
+}
+
+.checkout-title {
+  text-align: center;
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.order-summary {
+  margin-bottom: 30px;
+}
+
+.summary-title {
+  font-size: 1.5em;
+  color: #444;
+}
+
+.cart-items {
+  list-style-type: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.cart-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+}
+
+.total-amount {
+  font-size: 1.2em;
+  color: #333;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.empty-cart {
+  color: #999;
+  text-align: center;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  font-size: 1em;
+  color: #555;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #333;
+  transition: border-color 0.3s;
+}
+
+.form-input:focus {
+  border-color: #00aaff;
+  outline: none;
+}
+
+.submit-button {
+  background-color: #00aaff;
+  color: white;
+  padding: 12px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #0088cc;
+}
+
+.success-message {
+  color: green;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.error-message {
+  color: red;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.loading-text {
+  text-align: center;
+  color: #666;
+}
